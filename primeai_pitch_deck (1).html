@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrimeAI - Pitch Deck</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            line-height: 1.6;
+        }
+
+        .page {
+            width: 210mm;
+            height: 297mm;
+            margin: 0 auto;
+            padding: 40px;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            page-break-after: always;
+            border: 1px solid #e9ecef;
+            margin-bottom: 20px;
+        }
+
+        .page:last-child {
+            page-break-after: avoid;
+        }
+
+        .page-number {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            background: #667eea;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 40px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            color: #34495e;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: #7f8c8d;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        .content-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .content-list li {
+            margin-bottom: 15px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            border-radius: 8px;
+            font-size: 1.1rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .metric-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid #e9ecef;
+        }
+
+        .metric-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #667eea;
+            display: block;
+        }
+
+        .metric-label {
+            font-size: 1rem;
+            color: #6c757d;
+            margin-top: 10px;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .logo-placeholder {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 20px;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .problem-point {
+            background: #fff5f5;
+            border-left: 4px solid #e53e3e;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        .solution-point {
+            background: #f0fff4;
+            border-left: 4px solid #38a169;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            .page {
+                margin: 0;
+                border: none;
+                page-break-after: always;
+                width: 100%;
+                height: 100vh;
+            }
+            .page:last-child {
+                page-break-after: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Page 1: Cover -->
+    <div class="page">
+        <div class="page-number">1 / 13</div>
+        <div class="logo-placeholder">PrimeAI</div>
+        <h1>PrimeAI</h1>
+        <div class="subtitle">Democratizing Generative AI for Vietnam</div>
+        <div class="highlight-box">
+            <h3>Empowering Vietnamese SMEs & Creators with Localized AI Tools</h3>
+            <p>All-in-one SaaS Platform + Academy</p>
+        </div>
+        <div class="contact-info">
+            <p><strong>Contact:</strong> leo@primeai.vn | +84 915234546</p>
+            <p><strong>Website:</strong> www.primeai.vn</p>
+        </div>
+    </div>
+
+    <!-- Page 2: Problem -->
+    <div class="page">
+        <div class="page-number">2 / 13</div>
+        <h2>The Problem</h2>
+        <div class="problem-point">
+            <h3>🚫 Limited Access to AI Tools</h3>
+            <p>Vietnamese SMEs and creators lack affordable, localized AI tools that understand their market and language nuances.</p>
+        </div>
+        <div class="problem-point">
+            <h3>📈 Steep Learning Curve</h3>
+            <p>Existing AI solutions are complex, requiring technical expertise that most small businesses don't have.</p>
+        </div>
+        <div class="problem-point">
+            <h3>🧩 Fragmented Solutions</h3>
+            <p>Users need multiple tools for different AI tasks, creating inefficiency and increased costs.</p>
+        </div>
+    </div>
+
+    <!-- Page 3: Solution -->
+    <div class="page">
+        <div class="page-number">3 / 13</div>
+        <h2>Our Solution</h2>
+        <div class="highlight-box">
+            <h3>PrimeAI: All-in-One AI Platform + Academy</h3>
+        </div>
+        <div class="solution-point">
+            <h3>🎯 Zero-Code Interface</h3>
+            <p>Intuitive platform that anyone can use without technical background</p>
+        </div>
+        <div class="solution-point">
+            <h3>💳 Credit-Based System</h3>
+            <p>Flexible, pay-as-you-use model perfect for SME budgets</p>
+        </div>
+        <div class="solution-point">
+            <h3>🇻🇳 Vietnamese-First Design</h3>
+            <p>Localized UI, content, and AI models trained for Vietnamese market</p>
+        </div>
+        <div class="solution-point">
+            <h3>🎓 Integrated Academy</h3>
+            <p>Educational resources to help users maximize AI potential</p>
+        </div>
+    </div>
+
+    <!-- Page 4: Product -->
+    <div class="page">
+        <div class="page-number">4 / 13</div>
+        <h2>Product Overview</h2>
+        <div class="metric-grid">
+            <div class="metric-card">
+                <span class="metric-number">🖼️</span>
+                <div class="metric-label">Image Generation & Editing</div>
+            </div>
+            <div class="metric-card">
+                <span class="metric-number">🎥</span>
+                <div class="metric-label">Video Creation & Processing</div>
+            </div>
+            <div class="metric-card">
+                <span class="metric-number">🎵</span>
+                <div class="metric-label">Audio & Voice Synthesis</div>
+            </div>
+            <div class="metric-card">
+                <span class="metric-number">📝</span>
+                <div class="metric-label">Text & Content Generation</div>
+            </div>
+        </div>
+        <div class="highlight-box">
+            <h3>15+ AI Tools in One Platform</h3>
+            <p>Expandable through our plug-in marketplace for specialized needs</p>
+        </div>
+    </div>
+
+    <!-- Page 5: Market -->
+    <div class="page">
+        <div class="page-number">5 / 13</div>
+        <h2>Market Opportunity</h2>
+        <div class="metric-grid">
+            <div class="metric-card">
+                <span class="metric-number">$3.5B</span>
+                <div class="metric-label">SEA Gen-AI SaaS TAM</div>
+            </div>
+            <div class="metric-card">
+                <span class="metric-number">18%+</span>
+                <div class="metric-label">Vietnam Digital Economy CAGR</div>
+            </div>
+        </div>
+        <div class="two-column">
+            <div>
+                <h3>Market Drivers</h3>
+                <ul class="content-list">
+                    <li>Rapid digital transformation in Vietnam</li>
+                    <li>Growing SME sector seeking automation</li>
+                    <li>Increasing demand for content creation</li>
+                    <li>Government support for AI adoption</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Target Segments</h3>
+                <ul class="content-list">
+                    <li>SMEs & startups (60%)</li>
+                    <li>Content creators & agencies (25%)</li>
+                    <li>Educational institutions (10%)</li>
+                    <li>Enterprise clients (5%)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 6: Business Model -->
+    <div class="page">
+        <div class="page-number">6 / 13</div>
+        <h2>Business Model</h2>
+        <div class="metric-grid">
+            <div class="metric-card">
+                <span class="metric-number">FREE</span>
+                <div class="metric-label">10 Monthly Credits</div>
+            </div>
+            <div class="metric-card">
+                <span class="metric-number">Credit</span>
+                <div class="metric-label">Based Usage Model</div>
+            </div>
+            <div class="metric-card">
+                <span class="metric-number">Custom</span>
+                <div class="metric-label">Enterprise API & Training</div>
+            </div>
+        </div>
+        <div class="highlight-box">
+            <h3>Credit-Based Usage Model</h3>
+            <p>Minimum $0.5 to buy credits • Low barrier to entry, high value realization</p>
+        </div>
+    </div>
+
+    <!-- Page 7: Traction -->
+    <div class="page">
+        <div class="page-number">7 / 13</div>
+        <h2>Traction & Growth</h2>
+        <div class="metric-grid">
+            <div class="metric-card">
+                <span class="metric-number">2K</span>
+                <div class="metric-label">Active Users</div>
+            </div>
+            <div class="metric-card">
+                <span class="metric-number">50K</span>
+                <div class="metric-label">AI Creations</div>
+            </div>
+            <div class="metric-card">
+                <span class="metric-number">$50K</span>
+                <div class="metric-label">ARR Run-rate</div>
+            </div>
+            <div class="metric-card">
+                <span class="metric-number">3</span>
+                <div class="metric-label">Pilot Corporates</div>
+            </div>
+        </div>
+        <div class="highlight-box">
+            <h3>Strong Early Adoption Across Sectors</h3>
+            <p>Media, E-commerce, and Ed-tech companies validating our approach</p>
+        </div>
+    </div>
+
+    <!-- Page 8: Competition -->
+    <div class="page">
+        <div class="page-number">8 / 13</div>
+        <h2>Competitive Landscape</h2>
+        <div class="two-column">
+            <div>
+                <h3>Key Competitors</h3>
+                <ul class="content-list">
+                    <li><strong>Canva:</strong> Design-focused, limited AI</li>
+                    <li><strong>Runway:</strong> Video-centric, high complexity</li>
+                    <li><strong>Local Tools:</strong> Single-purpose solutions</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Our Competitive Advantage</h3>
+                <ul class="content-list">
+                    <li>🌍 Deep Vietnamese localization</li>
+                    <li>📚 Integrated education platform</li>
+                    <li>🔧 Comprehensive tool breadth</li>
+                    <li>💰 SME-friendly pricing</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 9: Technology & NVIDIA -->
+    <div class="page">
+        <div class="page-number">9 / 13</div>
+        <h2>Technology Stack & NVIDIA Partnership</h2>
+        <div class="highlight-box">
+            <h3>Powered by NVIDIA Infrastructure</h3>
+        </div>
+        <div class="two-column">
+            <div>
+                <h3>GPU Infrastructure</h3>
+                <ul class="content-list">
+                    <li>A100 & L40S GPU clusters</li>
+                    <li>CUDA acceleration</li>
+                    <li>Triton inference server</li>
+                    <li>TensorRT optimization</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Architecture</h3>
+                <ul class="content-list">
+                    <li>Secure microservices</li>
+                    <li>NVIDIA Riva for speech</li>
+                    <li>Jetson edge roadmap</li>
+                    <li>Scalable ML pipeline</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 10: Go-to-Market -->
+    <div class="page">
+        <div class="page-number">10 / 13</div>
+        <h2>Go-to-Market Strategy</h2>
+        <div class="metric-grid">
+            <div class="metric-card">
+                <span class="metric-number">🎯</span>
+                <div class="metric-label">Influencer Content Marketing</div>
+            </div>
+            <div class="metric-card">
+                <span class="metric-number">🎓</span>
+                <div class="metric-label">University Club Partnerships</div>
+            </div>
+            <div class="metric-card">
+                <span class="metric-number">🚀</span>
+                <div class="metric-label">Microsoft for Startups Perks</div>
+            </div>
+            <div class="metric-card">
+                <span class="metric-number">🤝</span>
+                <div class="metric-label">Reseller Channel Program</div>
+            </div>
+        </div>
+        <div class="highlight-box">
+            <h3>Multi-Channel Approach for Rapid Market Penetration</h3>
+            <p>Community-driven growth with strategic partnerships</p>
+        </div>
+    </div>
+
+    <!-- Page 11: Team -->
+    <div class="page">
+        <div class="page-number">11 / 13</div>
+        <h2>Leadership Team</h2>
+        <div class="metric-grid">
+            <div class="metric-card">
+                <span class="metric-number">👨‍💼</span>
+                <div class="metric-label">CEO (1)</div>
+            </div>
+            <div class="metric-card">
+                <span class="metric-number">👨‍💻</span>
+                <div class="metric-label">CTO (1)</div>
+            </div>
+            <div class="metric-card">
+                <span class="metric-number">🔬</span>
+                <div class="metric-label">2 AI Engineers</div>
+            </div>
+            <div class="metric-card">
+                <span class="metric-number">📈</span>
+                <div class="metric-label">1 Growth Lead</div>
+            </div>
+        </div>
+        <div class="highlight-box">
+            <h3>Proven Track Record in AI & Vietnamese Market</h3>
+            <p>Deep technical expertise combined with local market knowledge</p>
+        </div>
+    </div>
+
+    <!-- Page 12: Financials -->
+    <div class="page">
+        <div class="page-number">12 / 13</div>
+        <h2>Financial Projections</h2>
+        <div class="metric-grid">
+            <div class="metric-card">
+                <span class="metric-number">2027</span>
+                <div class="metric-label">Break-even Year</div>
+            </div>
+            <div class="metric-card">
+                <span class="metric-number">70%</span>
+                <div class="metric-label">Gross Margin</div>
+            </div>
+        </div>
+        <div class="highlight-box">
+            <h3>3-Year Growth Trajectory</h3>
+            <p>Sustainable unit economics with path to profitability</p>
+        </div>
+        <div class="two-column">
+            <div>
+                <h3>Revenue Drivers</h3>
+                <ul class="content-list">
+                    <li>Subscription growth</li>
+                    <li>Enterprise expansion</li>
+                    <li>API monetization</li>
+                    <li>Training services</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Key Metrics</h3>
+                <ul class="content-list">
+                    <li>LTV:CAC ratio 3:1+</li>
+                    <li>Monthly churn <5%</li>
+                    <li>40%+ YoY growth</li>
+                    <li>Positive unit economics</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 13: Ask -->
+    <div class="page">
+        <div class="page-number">13 / 13</div>
+        <h2>The Ask</h2>
+        <div class="highlight-box">
+            <h1>$500K Seed Round</h1>
+        </div>
+        <div class="two-column">
+            <div>
+                <h3>Use of Funds</h3>
+                <ul class="content-list">
+                    <li>💻 GPU credits & infrastructure</li>
+                    <li>👥 Team expansion (AI engineers)</li>
+                    <li>🌏 Regional market expansion</li>
+                    <li>🤝 Strategic partnerships</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Partnership Opportunities</h3>
+                <ul class="content-list">
+                    <li>NVIDIA Inception Program</li>
+                    <li>Enterprise pilot partnerships</li>
+                    <li>University collaborations</li>
+                    <li>Government AI initiatives</li>
+                </ul>
+            </div>
+        </div>
+        <div class="contact-info">
+            <h3>Let's democratize AI for Vietnam together!</h3>
+            <p><strong>Ready to discuss:</strong> leo@primeai.vn</p>
+        </div>
+    </div>
+</body>
+</html>
